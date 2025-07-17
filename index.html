@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calaulator.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="screen">
+                <div id="display1"></div> <!-- smaller display for storing temporary result after pressing operator as the main imput display is cleared-->
+                <div id="display2"></div>
+            </div>
+
+            <div class="keys">
+                <div class="clearkeys" id="clearkeys">
+                    <button id="clear" value="clear">AC</button>
+                    <button id="delete" value="delete">DEL</button>
+                </div>
+                <div class="actionkeys" id="numkeys">
+                    <div class="nrow1">
+                        <button value="9" id="num9">9</button>
+                        <button value="8" id="num8">8</button>
+                        <button value="7" id="num7">7</button>
+                        <button value="/" id="divide" class="operator" onclick="operate(value)">/</button>
+                    </div>
+                    <div class="nrow2">
+                        <button value="6" id="num6">6</button>
+                        <button value="5" id="num5">5</button>
+                        <button value="4" id="num4">4</button>
+                        <button value="*" id="multiply" class="operator" onclick="operate(value)">x</button>
+                    </div>
+                    <div class="nrow3">
+                        <button value="3" id="num3">3</button>
+                        <button value="2" id="num2">2</button>
+                        <button value="1" id="num1">1</button>
+                        <button value="+" id="add" class="operator" onclick="operate(value)">+</button>
+                    </div>
+                    <div class="nrow4">
+                        <button value="." id="dot">.</button>
+                        <button value="0" id="num0">0</button>
+                        <button value="=" id="equals" onclick="operate(value)">=</button>
+                        <button value="-" id="subtract" class="operator" onclick="operate(value)">-</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
